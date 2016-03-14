@@ -55,7 +55,7 @@ define(
             msg.pub("warn", warn);
           }
 
-          var styleBaseURL = "https://www.w3.org/StyleSheets/TR/{version}";
+          var styleBaseURL = "respec/";
           var finalStyleURL = "";
           var styleFile = "W3C-";
 
@@ -106,6 +106,7 @@ define(
           var finalVersionPath = (version) ? version + "/" : "";
           finalStyleURL = styleBaseURL.replace("{version}", finalVersionPath);
           finalStyleURL += styleFile;
+          finalStyleURL += ".css";
 
           utils.linkCSS(doc, finalStyleURL);
           msg.pub("end", "w3c/style");
